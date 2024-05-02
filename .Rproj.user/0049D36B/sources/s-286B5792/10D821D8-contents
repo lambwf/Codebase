@@ -1,0 +1,8 @@
+
+#install.packages('tidyverse')
+install.packages('openxlsx')
+install.packages('countrycode')
+install.packages('ggrepel')
+install.packages('patchwork')
+install.packages('zoo')
+install.packages('RColorBrewer')
