@@ -3,11 +3,12 @@
 
 load_gcb_countries_ffi <- function(sheet_ffi) {
   
-  
   data_gcb_co2_ffi <- gather(sheet_ffi,country,value,-X1)
   data_gcb_co2_ffi <- data_gcb_co2_ffi %>% 
     rename(year=X1) %>% 
-    mutate(iso=countrycode(country,"country.name","iso3c")) %>% 
+    mutate(iso=countrycode(country,"country.name","iso3c"))
+  
+  data_gcb_co2_ffi <- data_gcb_co2_ffi %>% 
     mutate(iso=ifelse(country=="Netherlands Antilles","ANT",iso)) %>% 
     mutate(iso=ifelse(country=="Türkiye","TUR",iso)) %>% 
     mutate(value=value/1000) %>% 
@@ -40,7 +41,9 @@ load_gcb_countries_luc <- function(sheet_blue,sheet_hn,sheet_oscar){
     mutate(hn=as.numeric(hn)) %>% 
     mutate(oscar=as.numeric(oscar)) %>% 
     mutate(mean=(blue+hn+oscar)/3) %>% 
-    mutate(iso=countrycode(country,"country.name","iso3c")) %>% 
+    mutate(iso=countrycode(country,"country.name","iso3c")) 
+  
+  data_gcb_luc <- data_gcb_luc %>%  
     mutate(iso=ifelse(country=="Netherlands Antilles","ANT",iso)) %>% 
     mutate(iso=ifelse(country=="Türkiye","TUR",iso))
   
