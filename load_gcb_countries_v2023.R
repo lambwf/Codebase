@@ -6,7 +6,7 @@ load_gcb_countries_ffi <- function(sheet_ffi) {
   data_gcb_co2_ffi <- gather(sheet_ffi,country,value,-X1)
   data_gcb_co2_ffi <- data_gcb_co2_ffi %>% 
     rename(year=X1) %>% 
-    mutate(iso=countrycode(country,"country.name","iso3c"))
+    mutate(iso=countrycode(country,"country.name","iso3c",warn=FALSE))
   
   data_gcb_co2_ffi$iso[grepl("Türkiye",data_gcb_co2_ffi$country)] <- "TUR"
   
