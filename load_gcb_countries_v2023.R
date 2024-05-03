@@ -39,10 +39,16 @@ load_gcb_countries_luc <- function(sheet_blue,sheet_hn,sheet_oscar){
     mutate(oscar=as.numeric(oscar)) %>% 
     mutate(mean=(blue+hn+oscar)/3) %>% 
     mutate(iso=countrycode(country,"country.name","iso3c")) %>% 
+    mutate(iso=ifelse(country=="Netherlands Antilles","ANT",iso)) %>% 
+    mutate(iso=ifelse(country=="Türkiye","TUR",iso))
+  
+  data_gcb_luc <- gather(data_gcb_luc,key,value,blue,hn,oscar,mean) %>% 
     mutate(value=value/1000) %>% 
-    mutate(value=value*(44/12)) %>%
+    mutate(value=value*(44/12)) 
+  
+  data_gcb_luc <- spread(data_gcb_luc,key,value) %>%
     mutate(units="GtCO2") %>% 
-    select(country,iso,units,year,blue,hn,oscar,mean,value) 
+    select(country,iso,units,year,blue,hn,oscar,mean) 
   
   
   return(data_gcb_luc)
