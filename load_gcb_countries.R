@@ -37,7 +37,12 @@ load_gcb_countries_luc <- function(sheet_blue,sheet_hn,sheet_oscar){
     mutate(blue=as.numeric(blue)) %>% 
     mutate(hn=as.numeric(hn)) %>% 
     mutate(oscar=as.numeric(oscar)) %>% 
-    mutate(mean=(blue+hn+oscar)/3)
+    mutate(mean=(blue+hn+oscar)/3) %>% 
+    mutate(iso=countrycode(country,"country.name","iso3c")) %>% 
+    mutate(value=value/1000) %>% 
+    mutate(value=value*(44/12)) %>%
+    mutate(units="GtCO2") %>% 
+    select(country,iso,units,year,blue,hn,oscar,mean,value) 
   
   
   return(data_gcb_luc)
