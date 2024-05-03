@@ -8,9 +8,11 @@ load_gcb_countries_ffi <- function(sheet_ffi) {
     rename(year=X1) %>% 
     mutate(iso=countrycode(country,"country.name","iso3c"))
   
+  data_gcb_co2_ffi$iso[grepl("Türkiye",data_gcb_co2_ffi$country)] <- "TUR"
+  
   data_gcb_co2_ffi <- data_gcb_co2_ffi %>% 
-    mutate(iso=ifelse(country=="Netherlands Antilles","ANT",iso)) %>% 
-    mutate(iso=ifelse(country=="Türkiye","TUR",iso)) %>% 
+    #mutate(iso=ifelse(country=="Netherlands Antilles","ANT",iso)) %>% 
+    #mutate(iso=ifelse(country=="Türkiye","TUR",iso)) %>% 
     mutate(value=value/1000) %>% 
     mutate(value=value*(44/12)) %>%
     mutate(units="GtCO2") %>% 
