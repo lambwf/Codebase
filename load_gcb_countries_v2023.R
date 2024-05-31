@@ -21,6 +21,12 @@ load_gcb_countries_ffi <- function(sheet_ffi) {
   return(data_gcb_co2_ffi) 
 }
 
+# sheet_blue <- readxl::read_xlsx('sources/National_LandUseChange_Carbon_Emissions_2023v1.0.xlsx',range="A8:GT182",sheet=2)
+# sheet_hn <- readxl::read_xlsx('sources/National_LandUseChange_Carbon_Emissions_2023v1.0.xlsx',range="A8:GT182",sheet=3)
+# sheet_oscar <- readxl::read_xlsx('sources/National_LandUseChange_Carbon_Emissions_2023v1.0.xlsx',range="A8:GT182",sheet=4)
+# library(tidyverse)
+# library(countrycode)
+
 load_gcb_countries_luc <- function(sheet_blue,sheet_hn,sheet_oscar){
   
   
