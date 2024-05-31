@@ -30,6 +30,6 @@ load_edgar <- function(sheet_ffi,sheet_ch4,sheet_n2o,sheet_fgas) {
   data_edgar$year <- as.numeric(data_edgar$year)
   
   
-  return(data_edgar_ghg) 
+  return(data_edgar) 
   
 }
