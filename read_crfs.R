@@ -32,11 +32,24 @@ for (i in 1:length(files_countries$files)) {
       mutate(year = files_crfs$year[j]) %>% 
       select(country,year_submission,gwp,gas,year,category,value)
     
+    
+    sheet_lulucf = read.xlsx(paste0("sources/CRFs/",files_countries$files[i],"/",files_crfs$files[j]),sheet="Summary1.As2",startRow = 5,cols = 1:9)
+    names(sheet_lulucf) <- c("category","CO2","CH4","N2O","HFCs","PFCs","HFCs/PFCs","SF6","NF3")
+    sheet_lulucf <- sheet_lulucf %>% filter(category=="4.  Land use, land-use change and forestry  (4)")
+    sheet_lulucf <- gather(sheet_lulucf,gas,value,-category)
+    sheet_lulucf <- sheet_lulucf %>% 
+      filter(gas=="CO2") %>% 
+      mutate(country = files_countries$country[i]) %>% 
+      mutate(year_submission = files_countries$year_submission[i]) %>% 
+      mutate(gwp = files_countries$gwp[i]) %>% 
+      mutate(year = files_crfs$year[j]) %>% 
+      select(country,year_submission,gwp,gas,year,category,value)
+    
     data_crfs <- rbind(data_crfs,sheet)
+    data_crfs <- rbind(data_crfs,sheet_lulucf)
+    
     
     }
-  
-  
   
 }
 
@@ -48,5 +61,15 @@ data_crfs <- data_crfs %>%
   mutate(country=ifelse(iso=="EU27","European Union",country)) %>% 
   select(country,iso,everything())
 
+## exclude LULUCF from totals
+
+data_crfs <- data_crfs %>% 
+  mutate(gas=ifelse(category=="4.  Land use, land-use change and forestry  (4)","CO2 LULUCF",gas)) %>% 
+  select(-category) %>% 
+  mutate(value=as.numeric(value))
+data_crfs <- spread(data_crfs,gas,value)
+data_crfs <- data_crfs %>% 
+  mutate(CO2=CO2-`CO2 LULUCF`)
+data_crfs <- gather(data_crfs,gas,value,CH4:SF6)
 
 save(data_crfs,file="data/data_crfs_2023.RData")
