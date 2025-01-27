@@ -103,8 +103,6 @@ theme_wl_emissions <- function() {
         color = '#636363',
         margin = margin(t = 10)),
       
-      plot.title = element_text(margin = margin(t = 10)),
-      
       plot.subtitle = element_text(
         family = font,
         size = 12,
