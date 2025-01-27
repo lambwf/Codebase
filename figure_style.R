@@ -89,7 +89,7 @@ theme_wl_emissions <- function() {
       # Legend
       legend.position="right",
       legend.title=element_blank(),
-      legend.key.size = unit(0.5, "cm"), +
+      legend.key.size = unit(0.5, "cm"),
       
       
       # Text elements
