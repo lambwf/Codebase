@@ -117,9 +117,6 @@ theme_wl_emissions <- function() {
         color = '#bdbdbd'),       #color
       
       
-      axis.title = element_blank(),
-      
-      
       axis.title = element_text(             #axis titles
         family = font,            #font family
         size = 10,                #font size
