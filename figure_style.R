@@ -65,7 +65,7 @@ theme_wl <- function() {
 
 theme_wl_emissions <- function() {
   
-  font <- "Arial"
+  font <- "sans"
   
   theme_bw() %+replace%
     
