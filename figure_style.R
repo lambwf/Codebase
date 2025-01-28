@@ -78,7 +78,7 @@ theme_wl_emissions <- function() {
       axis.ticks = element_line(color="#636363",size=0.25),     #smaller axis ticks
       axis.line = element_line(color="#636363",size = 0.25),
       strip.background = element_blank(),
-      strip.text = element_text(size=12,color='#636363',hjust=0,face = "bold"),
+      strip.text = element_text(size=12,color='#636363',hjust=0,face = "bold",margin=margin(b=5)),
       
       
       # Border lines
