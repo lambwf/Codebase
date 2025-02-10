@@ -17,17 +17,21 @@ theme_wl <- function() {
       
       
       # Border lines
-      panel.border = element_rect(color="#636363",fill=NA,size = 0.7),
+      panel.border = element_blank(),
       panel.background = element_blank(),
-            # Text elements
+      axis.line = element_line(color="#636363",size = 0.25),
       
-      plot.title = element_text(             #title
-        family = font,            #set font family
-        size = 14,                #set font size
-        face = 'bold',            #bold typeface
-        hjust = 0,                #left align
-        vjust = 3,                #raise slightly
-        color = '#636363'),       #color
+      
+      # Text elements
+      
+      plot.title = element_text( 
+        family = font,           
+        size = 14,               
+        face = 'bold',           
+        hjust = 0,               
+        vjust = 3,               
+        color = '#636363',
+        margin = margin(t = 10)),
       
       plot.subtitle = element_text(
         family = font,
@@ -41,6 +45,7 @@ theme_wl <- function() {
         size = 9,                 #font size
         hjust = 0,                #right align
         color = '#bdbdbd'),       #color
+      
       
       axis.title = element_text(             #axis titles
         family = font,            #font family
