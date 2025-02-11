@@ -143,6 +143,70 @@ theme_wl_emissions <- function() {
       
 }
 
+theme_wl_empty <- function () {
+  
+  font <- "sans"
+  
+  theme_bw() %+replace%
+    
+    theme(
+      
+      axis.title = element_blank(),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      panel.grid = element_blank(),
+      panel.background = element_blank(),
+      panel.border = element_blank(),
+      
+      
+      # Text elements
+      
+      plot.title = element_text( 
+        family = font,           
+        size = 14,               
+        face = 'bold',           
+        hjust = 0,               
+        vjust = 3,               
+        color = '#636363',
+        margin = margin(t = 10)),
+      
+      plot.subtitle = element_text(
+        family = font,
+        size = 12,
+        hjust = 0,
+        vjust = 2,
+        color = '#636363'),
+      
+      plot.caption = element_text(           #caption
+        family = font,            #font family
+        size = 9,                 #font size
+        hjust = 0,                #right align
+        color = '#bdbdbd'),       #color
+      
+      
+      axis.title = element_text(             #axis titles
+        family = font,            #font family
+        size = 10,                #font size
+        color = '#636363'),       #color
+      
+      axis.text = element_text(              #axis text
+        family = font,            #axis famuly
+        size = 9,                 #font size
+        color = '#636363'),       #color
+      
+      axis.text.x = element_text(            #margin for axis text
+        margin=margin(5, b = 10)),
+      
+      text = element_text(
+        family = font,
+        color = '#636363')
+      
+      
+    )
+  
+}
+
+
 colours_9_sectors <- c("#365f90ff", "#4672b3ff", "#659cccff", "#a3d3f7ff", "#6ccac8ff", "#e5b82cff", "#4f8455ff", "#6aad75ff", "#818181ff")
 colours_9_qual <- c("#ff9055ff", "#659cccff", "#e5b82cff", "#7dd396ff", "#818181ff", "#9467bdff", "#17becfff", "#d45087ff")
 
