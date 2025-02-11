@@ -28,14 +28,15 @@ theme_wl <- function() {
         hjust = 0,               
         vjust = 3,               
         color = '#636363',
-        margin = margin(t = 10, b = 3)),
+        margin = margin(t = 10)),
       
       plot.subtitle = element_text(
         family = font,
         size = 12,
         hjust = 0,
         vjust = 2,
-        color = '#636363'),
+        color = '#636363',
+        margin = margin(b = 3)),
       
       plot.caption = element_text(
         family = font,            
@@ -93,7 +94,9 @@ theme_wl_empty <- function () {
       
       axis.title = element_blank(),
       axis.text = element_blank(),
+      axis.text.x = element_blank(),
       axis.ticks = element_blank(),
+      axis.line = element_blank(),
       panel.grid = element_blank(),
       panel.background = element_blank(),
       panel.border = element_blank(),
@@ -103,7 +106,21 @@ theme_wl_empty <- function () {
 }
 
 
-colours_9_sectors <- c("#365f90ff", "#4672b3ff", "#659cccff", "#a3d3f7ff", "#6ccac8ff", "#e5b82cff", "#4f8455ff", "#6aad75ff", "#818181ff")
+colours_9_sectors <- c(
+  "Energy | Power" = "#365f90ff",
+  "Energy | Industry" = "#4672b3ff",
+  "Energy | Transport" = "#659cccff",
+  "Energy | Buildings & other" = "#a3d3f7ff",
+  "Energy | Fuel production" = "#6ccac8ff",
+  "Industrial processes" = "#e5b82cff",
+  "Agriculture" = "#4f8455ff",
+  "Land use change (LULUCF)" = "#6aad75ff",
+  "Waste" = "#818181ff")
+
+
+
+
+
 colours_9_qual <- c("#ff9055ff", "#659cccff", "#e5b82cff", "#7dd396ff", "#818181ff", "#9467bdff", "#17becfff", "#d45087ff")
 
 
