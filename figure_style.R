@@ -124,6 +124,28 @@ colours_9_sectors <- c(
 colours_9_qual <- c("#ff9055ff", "#659cccff", "#e5b82cff", "#7dd396ff", "#818181ff", "#9467bdff", "#17becfff", "#d45087ff")
 
 
+
+colours_gases <- c("CH4" = "#ff9055ff", 
+                   "CO2 Fossil" = "#659cccff",
+                   "N2O" = "#e5b82cff",
+                   "CO2 LULUCF" = "#7dd396ff",
+                   "F-gases" = "#17becfff")
+
+
+colours_top6 <- c("Russia" = "#ff9055ff", 
+                  "United States" = "#659cccff",
+                  "China" = "#e5b82cff",
+                  "European Union" = "#7dd396ff",
+                  "Brazil" = "#17becfff",
+                  "India" = "#d45087ff",
+                  "World" = "#818181ff")
+
+
+
+
+
+
+
 # more_set2_colors <- function(number) {
 #   
 #   colors = colorRampPalette(brewer.pal(8, "Set2"))(number)
