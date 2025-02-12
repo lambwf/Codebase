@@ -107,10 +107,10 @@ theme_wl_empty <- function () {
 
 
 colours_9_sectors <- c(
-  "Energy | Power" = "#365f90ff",
-  "Energy | Industry" = "#4672b3ff",
-  "Energy | Transport" = "#659cccff",
-  "Energy | Buildings & other" = "#a3d3f7ff",
+  "Energy | Power" = "#27426aff",
+  "Energy | Industry" = "#3a5e91ff",
+  "Energy | Transport" = "#5185b5ff",
+  "Energy | Buildings & other" = "#74a6d4ff",
   "Energy | Fuel production" = "#6ccac8ff",
   "Industrial processes" = "#e5b82cff",
   "Agriculture" = "#4f8455ff",
