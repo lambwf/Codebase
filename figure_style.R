@@ -106,18 +106,28 @@ theme_wl_empty <- function () {
 }
 
 
+# colours_9_sectors <- c(
+#   "Energy | Power" = "#27426aff",
+#   "Energy | Industry" = "#3a5e91ff",
+#   "Energy | Transport" = "#5185b5ff",
+#   "Energy | Buildings & other" = "#74a6d4ff",
+#   "Energy | Fuel production" = "#17becfff",
+#   "Industrial processes" = "#e5b82cff",
+#   "Agriculture" = "#4f8455ff",
+#   "Land use change (LULUCF)" = "#7dd396ff",
+#   "Waste" = "#818181ff")
+
+
 colours_9_sectors <- c(
-  "Energy | Power" = "#27426aff",
+  "Energy | Power" = "#17becfff",
   "Energy | Industry" = "#3a5e91ff",
   "Energy | Transport" = "#5185b5ff",
   "Energy | Buildings & other" = "#74a6d4ff",
-  "Energy | Fuel production" = "#6ccac8ff",
+  "Energy | Fuel production" = "#ff9055ff",
   "Industrial processes" = "#e5b82cff",
   "Agriculture" = "#4f8455ff",
-  "Land use change (LULUCF)" = "#6aad75ff",
+  "Land use change (LULUCF)" = "#7dd396ff",
   "Waste" = "#818181ff")
-
-
 
 
 
