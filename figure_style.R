@@ -145,12 +145,10 @@ colours_gases <- c("CH4" = "#ff9055ff",
 colours_top6 <- c("Russia" = "#ff9055ff", 
                   "United States" = "#659cccff",
                   "China" = "#e5b82cff",
-                  "European Union" = "#7dd396ff",
-                  "Brazil" = "#17becfff",
+                  "European Union" = "#17becfff",
+                  "Brazil" = "#7dd396ff",
                   "India" = "#d45087ff",
                   "World" = "#818181ff")
-
-
 
 
 
