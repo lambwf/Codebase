@@ -20,6 +20,11 @@ theme_wl <- function() {
       axis.line = element_line(color="#636363",size = 0.25),
       
       
+      # Facet strip
+      strip.background = element_blank(),
+      strip.text = element_text(size=12,hjust=0,color = '#636363'),
+      
+      
       # Text elements
       plot.title = element_text( 
         family = font,           
