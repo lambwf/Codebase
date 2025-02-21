@@ -22,7 +22,7 @@ theme_wl <- function() {
       
       # Facet strip
       strip.background = element_blank(),
-      strip.text = element_text(size=12,hjust=0.025,color = '#636363'),
+      strip.text = element_text(size=12,hjust=0,margin=margin(b=3),color = '#636363'),
       
       
       # Text elements
