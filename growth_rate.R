@@ -10,12 +10,29 @@ growth_rate <- function(years,y) {
   data <- data %>%
     mutate(y=adjusted)
   
-  fit <- lm(log(y) ~ years,data = data)
+  if ((max(data$years)-min(data$years))>1) {
+    
+    fit <- lm(log(y) ~ years,data = data)
+    
+    data <- data %>% 
+      mutate(rate=fit$coefficients[2]) %>% 
+      mutate(predicted_x = exp(predict(fit,data %>% select(years)))) %>% 
+      mutate(st_error = sqrt(diag(vcov(fit)))[2])
+    
+    return(list("rate"=fit$coefficients[2],"data"=data))
+    
+  }
+  else {
+    
+    data <- data %>%
+      mutate(group="group") %>% 
+      group_by(group) %>% 
+      mutate(rate=(last(y)-first(y))/first(y))
+    
+    return(list("rate"=data$rate[1]))
+    
+  }
   
-  data <- data %>% 
-    mutate(rate=fit$coefficients[2]) %>% 
-    mutate(predicted_x = exp(predict(fit,data %>% select(years)))) %>% 
-    mutate(st_error = sqrt(diag(vcov(fit)))[2])
   
-  return(list("rate"=fit$coefficients[2],"data"=data))
+  
 }
