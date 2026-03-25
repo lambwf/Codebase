@@ -157,6 +157,23 @@ colours_top6 <- c("Russia" = "#ff9055ff",
 
 
 
+colours_socdr <- c("Afforestation, reforestation, forest management" = "#91BA72",
+                   "Agroforestry" = "#3A6B61FF",
+                   "Alkalinity enhancement of water bodies"= "",
+                   "Bio-oil storage" = "#2B587B",
+                   "Biochar soil amendment" = "#846752",
+                   "Bioenergy with Carbon Capture and Storage" = "#F4D3F2",
+                   "Biomass sinking" = "#8FB7B9",
+                   "CDR (general)" = "#DFA126",
+                   "Direct Air Carbon Capture and Storage" = "#73617F",
+                   "Direct ocean carbon capture and storage" = "#BB93C3",
+                   "Durable wood products" = "#E6A964",
+                   "Enhanced weathering" = "#B55627",
+                   "Mineral products" = "#762764",
+                   "Ocean fertilisation" = "#33888E",
+                   "Peatland and coastal wetland restoration"="#9FCCDD",
+                   "Soil carbon sequestration in croplands and grasslands" = "#C4AA97",
+                   "Other"="#DFA126")
 
 
 # more_set2_colors <- function(number) {
