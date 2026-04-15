@@ -139,12 +139,20 @@ colours_9_sectors <- c(
 colours_9_qual <- c("#ff9055ff", "#659cccff", "#e5b82cff", "#7dd396ff", "#818181ff", "#9467bdff", "#17becfff", "#d45087ff")
 
 
+colours_fuels <- c("Coal"="#846752",
+                   "Oil"="#9467bdff",
+                   "Gas"="#d45087ff",
+                   "Other fossil"="#8FB7B9",
+                   "Biofuels"="#7dd396ff",
+                   "Non-fossil"="#818181ff")
+
 
 colours_gases <- c("CH4" = "#ff9055ff", 
                    "CO2 Fossil" = "#659cccff",
                    "N2O" = "#e5b82cff",
                    "CO2 LULUCF" = "#7dd396ff",
-                   "F-gases" = "#17becfff")
+                   "F-gases" = "#17becfff",
+                   "CO2" = "#659cccff")
 
 
 colours_top6 <- c("Russia" = "#ff9055ff", 
@@ -162,6 +170,7 @@ colours_socdr <- c("Afforestation, reforestation, forest management" = "#91BA72"
                    "Alkalinity enhancement of water bodies"= "",
                    "Bio-oil storage" = "#2B587B",
                    "Biochar soil amendment" = "#846752",
+                   "Biochar" = "#846752",
                    "Bioenergy with Carbon Capture and Storage" = "#F4D3F2",
                    "Biomass sinking" = "#8FB7B9",
                    "CDR (general)" = "#DFA126",
