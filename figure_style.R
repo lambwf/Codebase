@@ -172,9 +172,13 @@ colours_socdr <- c("Afforestation, reforestation, forest management" = "#91BA72"
                    "Biochar soil amendment" = "#846752",
                    "Biochar" = "#846752",
                    "Bioenergy with Carbon Capture and Storage" = "#F4D3F2",
+                   "Bioenergy with carbon capture and storage" = "#F4D3F2",
+                   "BECCS" = "#F4D3F2",
                    "Biomass sinking" = "#8FB7B9",
                    "CDR (general)" = "#DFA126",
                    "Direct Air Carbon Capture and Storage" = "#73617F",
+                   "Direct air carbon capture and storage" = "#73617F",
+                   "DACCS" = "#73617F",
                    "Direct ocean carbon capture and storage" = "#BB93C3",
                    "Durable wood products" = "#E6A964",
                    "Enhanced weathering" = "#B55627",
@@ -182,6 +186,7 @@ colours_socdr <- c("Afforestation, reforestation, forest management" = "#91BA72"
                    "Ocean fertilisation" = "#33888E",
                    "Peatland and coastal wetland restoration"="#9FCCDD",
                    "Soil carbon sequestration in croplands and grasslands" = "#C4AA97",
+                   "Soil carbon sequestration" = "#C4AA97",
                    "Other"="#DFA126")
 
 
