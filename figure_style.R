@@ -11,13 +11,13 @@ theme_wl <- function() {
       
       # Grid elements
       panel.grid.minor = element_blank(),
-      axis.ticks = element_line(color="#636363",size=0.25),
+      axis.ticks = element_line(color="#636363",linewidth =0.25),
       
       
       # Border lines
       panel.border = element_blank(),
       panel.background = element_blank(),
-      axis.line = element_line(color="#636363",size = 0.25),
+      axis.line = element_line(color="#636363",linewidth  = 0.25),
       
       
       # Facet strip
